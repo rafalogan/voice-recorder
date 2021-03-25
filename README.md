@@ -16,14 +16,6 @@ npm ci
 
 ## To Run
 
-To run development environment run
-
-```npm
-npm run dev
-```
-
-To production environment run
-
 ```npm
 npm start
 ```
