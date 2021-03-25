@@ -9,7 +9,16 @@ export default class View {
 		return () => command();
 	}
 
+
+	onStopRecordClick(command) {
+		return () => command();
+	}
+
 	configureStartRecordingButton(command) {
 		this.btnStart.addEventListener('click', this.onRecordClick(command));
+	}
+
+	configureStopRecordingButton(command) {
+		this.btnStop.addEventListener('click', this.onRecordClick(command));
 	}
 }
