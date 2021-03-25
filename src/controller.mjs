@@ -18,10 +18,15 @@ export default class Controller {
 
 	async onStartRecording() {
 		const audioStream = await this.media.getAudio()
-		this.recorder.startRecording(audioStream);
+		this.recorder.startRecording(audioStream)
 	}
 
 	async onStopRecording() {
-		this.recorder.stopRecording();
+		this.recorder.stopRecording()
+
+		setTimeout(() => {
+			const audioURL = this.recorder.getRecordingUrl()
+			this.view.playAudio(audioURL)
+		});
 	}
 }
