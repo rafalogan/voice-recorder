@@ -19,7 +19,7 @@
     "flow:end:feature": "git flow feature finish",
     "flow:start:release": "VERSION=$(node -p \"require('./package').version\") && git flow release start $VERSION",
     "flow:start:release:m": "git flow release start",
-    "flow:end:release": "git flow release finish",
+    "flow:end:release": "BRANCH=$(node -p \"require('./package').version\") && git flow release finish $BRANCH",
     "flow:start:hotfix": "git flow hotfix start",
     "flow:end:hotfix": "git flow hotfix finish",
     "flow:start:support": "git flow support start",
