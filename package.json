@@ -1,6 +1,6 @@
 {
   "name": "public",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -25,10 +25,10 @@
     "flow:start:support": "git flow support start",
     "flow:end:support": "git flow support finish",
     "flow:rm": "git branch -D",
+    "up:branch": "BRANCH=$(git branch --show-current) && git push --set-upstream origin $BRANCH",
     "add:patch": "npm version patch && git push",
     "add:minor": "npm version minor && git push",
-    "add:major": "npm version major && git push",
-    "up:branch": "BRANCH=$(git branch --show-current) && git push --set-upstream origin $BRANCH"
+    "add:major": "npm version major && git push"
   },
   "keywords": [],
   "author": "",
