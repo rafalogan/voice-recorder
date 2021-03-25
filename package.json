@@ -25,10 +25,9 @@
     "flow:start:support": "git flow support start",
     "flow:end:support": "git flow support finish",
     "flow:rm": "git branch -D",
-    "add:patch": "npm version patch",
-    "add:minor": "npm version minor && npm run send:version",
-    "add:major": "npm version major && npm run send:version",
-    "send:version": "VERSION=$(node -p \"require('./package').version\") && git commit -am \"nova versão $VERSION \" && git pull && git push",
+    "add:patch": "npm version patch && git push",
+    "add:minor": "npm version minor && git push",
+    "add:major": "npm version major && git push",
     "up:branch": "BRANCH=$(git branch --show-current) && git push --set-upstream origin $BRANCH"
   },
   "keywords": [],
